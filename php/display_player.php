@@ -7,9 +7,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['fname'])) {
 
         // Connexion à la base de données
         $servername = "localhost";
-        $username = "root"; // Changez 'root' si vous avez un autre nom d'utilisateur
-        $password = ""; // Ajoutez le mot de passe si vous en avez un
-        $dbname = "projet_foot"; // Remplacez par le nom de votre base de données
+        $username = "id22314719_projetphpettoh"; // Changez 'root' si vous avez un autre nom d'utilisateur
+        $password = "pass#Word1234"; // Ajoutez le mot de passe si vous en avez un
+        $dbname = "id22314719_dbdatabase"; // Remplacez par le nom de votre base de données
 
         // Créer une connexion
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -39,6 +39,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['fname'])) {
             $titres_obtenus = $row['titres_obtenus'];
             $valeur = $row['valeur'];
             $photo = $row['photo'];
+            $code_championnat = $row['code_championnat'];
+
         } else {
             echo "Aucun joueur trouvé avec cet ID.";
         }
@@ -59,7 +61,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['fname'])) {
 
     <style>
         body {
-            background-image: url('https://img.freepik.com/photos-premium/vue-panoramique-stade-football-vide-par-journee-ensoleillee-champ-vert-lignes-blanches-ciel-bleu-nuages-blancs_1187703-58816.jpg?size=626&ext=jpg&ga=GA1.1.1208765684.1717925982&semt=sph');
+            background-image: url('https://media.istockphoto.com/id/483369443/fr/photo/ballon-de-soccer-dans-le-but.jpg?s=612x612&w=0&k=20&c=8Jd5eYA7MoTI3giJaAJyg6AAyUpbzwAaaGNU6v6m1M4=');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -85,10 +87,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['fname'])) {
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Championnat</a>
                     </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Transfert</a>
-                    </li>
+                  
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -140,6 +139,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['fname'])) {
                         </div>
                         <div class="mb-3">
                             <label for="style_jeu" class="form-label">Style de Jeu:</label>
+                            
+                
                             <input type="text" class="form-control" id="style_jeu" value="<?= htmlspecialchars($style_jeu) ?>" readonly>
                         </div>
                         <div class="mb-3">
@@ -157,6 +158,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['fname'])) {
                         <div class="mb-3">
                             <label for="valeur" class="form-label">Valeur (€):</label>
                             <input type="text" class="form-control" id="valeur" value="<?= htmlspecialchars($valeur) ?>" readonly>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="code_championnat" class="form-label">code_championnat</label>
+                            <input type="text" class="form-control" id="code_championnat" value="<?= htmlspecialchars($code_championnat) ?>" readonly>
                         </div>
                     </div>
                 </div>

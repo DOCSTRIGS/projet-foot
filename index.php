@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <style>
         body {
-            background-image: url('https://img.freepik.com/photos-premium/vue-panoramique-stade-football-vide-par-journee-ensoleillee-champ-vert-lignes-blanches-ciel-bleu-nuages-blancs_1187703-58816.jpg?size=626&ext=jpg&ga=GA1.1.1208765684.1717925982&semt=sph');
+            background-image: url('https://media.istockphoto.com/id/483369443/fr/photo/ballon-de-soccer-dans-le-but.jpg?s=612x612&w=0&k=20&c=8Jd5eYA7MoTI3giJaAJyg6AAyUpbzwAaaGNU6v6m1M4=');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -20,7 +20,7 @@
     </style>
 </head>
 <body>
-    <div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="d-flex justify-content-center align-items-center vh-80">
         <form class="form-container shadow w-450 p-3" 
               action="php/signup.php" 
               method="post">
@@ -54,11 +54,63 @@
             </div>
 
             <div class="mb-3">
+                <label class="form-label">Mail</label>
+                <input type="text" 
+                       class="form-control"
+                       name="mail">
+            </div>
+
+            <div class="mb-3">
                 <label class="form-label">Password</label>
                 <input type="password" 
                        class="form-control"
                        name="pass">
             </div>
+
+            <div class="mb-3">
+                <label class="form-label">Adresse</label>
+                <input type="text" 
+                       class="form-control"
+                       name="adresse">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sexe</label>
+                
+                <select name="sexe">
+                    <option value="M">maculin</option>
+                    <option value="F">feminin</option>
+                    
+                </select>
+                
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Pays</label>
+                <!--<input type="text" 
+                       class="form-control"
+                       name="pays">-->
+
+                <select name="pays">
+                    <option value="PO">Portugal</option>
+                    <option value="GH">Ghana</option>
+                    <option value="TG">Togo</option>
+                    <option value="BN">Benin</option>
+                    <option value="AR">Argentine</option>
+                    <option value="FR">France</option>
+                    <option value="CG">Congo</option>
+                    <option value="TC">Tchad</option>
+                </select>
+
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">date</label>
+                <input type="text" 
+                       class="form-control"
+                       name="date">
+            </div>
+
             
             <button type="submit" class="btn btn-primary">Sign Up</button>
             <a href="login.php" class="link-secondary">Login</a>

@@ -16,8 +16,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['fname'])) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Requête SQL pour obtenir les informations des joueurs
-    $sql = "SELECT id, nom, prenom, photo FROM joueur"; // Ajout de l'ID du joueur à la requête SQL
+    // Requête SQL pour obtenir les informations des championnats
+    $sql = "SELECT code_championnat, nom_du_championnat, organisateur, pays FROM championnat"; // Assurez-vous que ces colonnes correspondent à votre base de données
     $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
@@ -50,10 +50,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['fname'])) {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="./php/add_player.php">Joueur</a>
+                        <a class="nav-link" href="#">Joueur</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="championnat.php">Championnat</a>
+                        <a class="nav-link active" aria-current="page" href="#">Championnat</a>
                     </li>
                     
                     <li class="nav-item">
@@ -80,9 +80,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['fname'])) {
             ?>
                     <div class="col-md-4">
                         <div class="card mb-4">
-                            <a href="./php/display_player.php?id=<?= htmlspecialchars($row["id"]) ?>"><img src="<?= htmlspecialchars($row["photo"]) ?>" class="card-img-top" alt="Player Image"></a>
                             <div class="card-body">
-                                <h5 class="card-title"><?= htmlspecialchars($row["nom"]) ?> <?= htmlspecialchars($row["prenom"]) ?></h5>
+                                <h5 class="card-title"><?= htmlspecialchars($row["nom_du_championnat"]) ?></h5>
+                                <p class="card-text">Organisateur: <?= htmlspecialchars($row["organisateur"]) ?></p>
+                                <p class="card-text">Pays: <?= htmlspecialchars($row["pays"]) ?></p>
                             </div>
                         </div>
                     </div>

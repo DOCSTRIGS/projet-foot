@@ -2,5 +2,9 @@
 	width: 450px;
 }
 .vh-100 {
-	min-height: 100vh;
+	min-height: 80vh;
+}
+select {
+	padding: 10px;
+	width: 100%;
 }

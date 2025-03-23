@@ -1,10 +1,10 @@
 <?php 
 session_start();
+include "../db_conn.php";
 
 if(isset($_POST['uname']) && 
    isset($_POST['pass'])){
 
-    include "../db_conn.php";
 
     $uname = $_POST['uname'];
     $pass = $_POST['pass'];
@@ -21,7 +21,7 @@ if(isset($_POST['uname']) &&
 	    exit;
     }else {
 
-    	$sql = "SELECT * FROM users WHERE username = ?";
+    	$sql = "SELECT * FROM internautes WHERE username = ?";
     	$stmt = $conn->prepare($sql);
     	$stmt->execute([$uname]);
 

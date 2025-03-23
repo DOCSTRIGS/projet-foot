@@ -1,9 +1,9 @@
 <?php 
 
 $sName = "localhost";
-$uName = "root";
-$pass = "";
-$db_name = "projet_foot";
+$uName = "id22314719_projetphpettoh";
+$pass = "pass#Word1234";
+$db_name = "id22314719_dbdatabase";
 
 try {
     $conn = new PDO("mysql:host=$sName;dbname=$db_name", 

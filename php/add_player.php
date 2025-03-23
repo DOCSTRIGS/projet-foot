@@ -4,9 +4,9 @@ session_start();
 if (isset($_SESSION['id']) && isset($_SESSION['fname'])) {
     // Connexion à la base de données
     $servername = "localhost";
-    $username = "root"; // Changez 'root' si vous avez un autre nom d'utilisateur
-    $password = ""; // Ajoutez le mot de passe si vous en avez un
-    $dbname = "projet_foot"; // Remplacez par le nom de votre base de données
+    $username = "id22314719_projetphpettoh"; // Changez 'root' si vous avez un autre nom d'utilisateur
+    $password = "pass#Word1234"; // Ajoutez le mot de passe si vous en avez un
+    $dbname = "id22314719_dbdatabase"; // Remplacez par le nom de votre base de données
 
     // Créer une connexion
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -31,7 +31,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['fname'])) {
 
         <style>
     body {
-    background-image: url('https://img.freepik.com/photos-premium/vue-panoramique-stade-football-vide-par-journee-ensoleillee-champ-vert-lignes-blanches-ciel-bleu-nuages-blancs_1187703-58816.jpg?size=626&ext=jpg&ga=GA1.1.1208765684.1717925982&semt=sph');
+    background-image: url('https://media.istockphoto.com/id/483369443/fr/photo/ballon-de-soccer-dans-le-but.jpg?s=612x612&w=0&k=20&c=8Jd5eYA7MoTI3giJaAJyg6AAyUpbzwAaaGNU6v6m1M4=');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -110,7 +110,7 @@ button:hover {
                         <span class="nav-link">Hello, <?=$_SESSION['fname']?></span>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="logout.php">Logout</a>
+                        <a class="nav-link" href="./login.php">Logout</a>
                     </li>
                 <?php } else { ?>
                     <li class="nav-item">
